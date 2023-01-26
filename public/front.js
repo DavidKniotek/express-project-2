@@ -8,7 +8,7 @@ form.addEventListener('submit', async event => {
     const numberA = Number(numberAInput.value);
     const numberB = Number(numberBInput.value);
 
-    const result = fetch('/calc/check', {
+    const result = await fetch('/calc/check', {
         method: 'POST',
         body: JSON.stringify({
             numberA,
